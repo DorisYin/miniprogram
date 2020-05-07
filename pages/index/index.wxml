@@ -1,0 +1,12 @@
+<!--pages/index/index.wxml-->
+<!-- 1.小程序的数据绑定：{{}} -- mustache -->
+<view>my name is {{name}}</view>
+<view>my age is {{age}}</view>
+
+<!-- 2.列表展示：wx:for -->
+<view wx:for='{{students}}'>{{item.id}}--{{item.name}}--{{item.age}}</view>
+
+<!-- 3.事件监听改变data -->
+<view>当前计数：{{count}}</view>
+<button size="mini" bindtap="addClick">+</button>
+<button  bindtap="subClick">-</button>
