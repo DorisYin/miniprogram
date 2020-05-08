@@ -9,4 +9,15 @@
 <!-- 3.事件监听改变data -->
 <view>当前计数：{{count}}</view>
 <button size="mini" bindtap="addClick">+</button>
-<button  bindtap="subClick">-</button>
+<button size="mini" bindtap="subClick">-</button>
+
+<!-- 获取用户信息方式一：app.js中wx.getUserInfo，需配合下面的授权按钮使用 -->
+<button open-type="getUserInfo">获取授权</button>
+<!-- 获取用户信息方式二：button bindgetuserinfo -->
+<button size="mini" open-type="getUserInfo" bindgetuserinfo="handleGetUserInfo">获取用户信息</button>
+<!-- 获取用户信息方式三： open-data:https://developers.weixin.qq.com/miniprogram/dev/reference/scene-list.html-->
+<open-data type='userNickName'></open-data>
+<open-data type='userAvatarUrl'></open-data>
+
+<!-- 网络请求，数据绑定 -->
+<view>网络请求：{{bomVersions[0]}}</view>

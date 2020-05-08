@@ -1,5 +1,6 @@
 // pages/index/index.js
 const app = getApp()
+console.log(app.globalData.name)
 Page({
 
   /**
@@ -17,7 +18,8 @@ Page({
       name: 'jsm',
       age: 12
     }],
-    count: 0
+    count: 0,
+    bomVersions:[]
 
   },
   addClick() {
@@ -26,20 +28,33 @@ Page({
     // console.log(this.data.count)
     //正确做法，界面的count实时刷新
     this.setData({
-      count:this.data.count+1
+      count: this.data.count + 1
     })
   },
-  subClick(){
+  subClick() {
     this.setData({
-      count:this.data.count-1
+      count: this.data.count - 1
     })
-
+  },
+  handleGetUserInfo(event) {
+    console.log(event)
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    //发送网络请求
+    wx.request({
+      url: 'http://192.168.3.122:8878/eoeoBom/getBomVersions',
+      success: (res) => {
+        console.log(res)
+        console.log(res.data.response.data.versions)
+        this.setData({
+          bomVersions:res.data.response.data.versions
+        })
+      }
+    })
 
   },
 

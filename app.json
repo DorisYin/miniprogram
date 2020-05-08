@@ -6,9 +6,11 @@
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChatxxx",
-    "navigationBarTextStyle": "black"
+    "navigationBarBackgroundColor": "#ff5777",
+    "navigationBarTitleText": "我的小程序",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#ff0000",
+    "enablePullDownRefresh": false
   },
   "tabBar": {
     "list": [
@@ -24,8 +26,10 @@
         "iconPath": "images/rizhi.jpg",
         "selectedIconPath": "images/rizhihl.jpg"
       }
-    ]
+    ],
+    "selectedColor": "#ff0000"
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"
+
 }

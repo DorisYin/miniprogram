@@ -5,45 +5,35 @@ App({
    * 当小程序初始化完成时，会触发 onLaunch（全局只触发一次）
    */
   onLaunch: function () {
-    var logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now)
-    wx.setStorageSync('logs', logs)
-
-    wx.login({
-      complete: (res) => {
-
+    wx.getUserInfo({
+      success: function (res) {
+        console.log(res)
       },
+      fail: function (res) {
+        console.log(res)
+      }
     })
-
-    wx.getSetting({
-      complete: (res) => {
-
-        if(res.authSetting['scope.userInfo']){
-          wx.getUserInfo({
-            complete: (res) => {
-              this.globalData.userInfo=res.getUserInfo
-
-              if(this.userInfoReadyCallBack){
-                console.log("userInfoReadyCallBack")
-                this.userInfoReadyCallBack(res)
-              }
-            },
-          })
-
-        }
-      },
-    })
-
-
   },
   globalData: {
-    userInfo: null
+    name: 'ss',
+    age: 11
   },
 
   /**
    * 当小程序启动，或从后台进入前台显示，会触发 onShow
    */
   onShow: function (options) {
+    //判断小程序进入场景
+    //场景值列表：https://developers.weixin.qq.com/miniprogram/dev/reference/scene-list.html
+    console.log(options)
+    switch (options.scene) {
+      case 1001:
+        //1001场景业务逻辑
+        break;
+      case 1005:
+        //1005场景业务逻辑
+        break
+    }
 
   },
 
