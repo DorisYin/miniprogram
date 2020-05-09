@@ -1,6 +1,5 @@
 // pages/index/index.js
 const app = getApp()
-console.log(app.globalData.name)
 Page({
 
   /**
@@ -19,7 +18,7 @@ Page({
       age: 12
     }],
     count: 0,
-    bomVersions:[]
+    bomVersions: []
 
   },
   addClick() {
@@ -39,6 +38,18 @@ Page({
   handleGetUserInfo(event) {
     console.log(event)
   },
+  //监听页面的滚动
+  onPageScroll(obj) {
+    console.log(obj)
+  },
+  //监听页面滚动到底部
+  onReachBottom() {
+    console.log('页面滚动到底部了')
+  },
+  //监听页面下拉刷新
+  onPullDownRefresh:function() {
+    console.log('下拉刷新了')
+  },
 
   /**
    * 生命周期函数--监听页面加载
@@ -47,16 +58,18 @@ Page({
     //发送网络请求
     wx.request({
       url: 'http://192.168.3.122:8878/eoeoBom/getBomVersions',
+      //箭头函数中的this是一层一层的往上找的
       success: (res) => {
         console.log(res)
         console.log(res.data.response.data.versions)
         this.setData({
-          bomVersions:res.data.response.data.versions
+          bomVersions: res.data.response.data.versions
         })
       }
     })
 
   },
+
 
   /**
    * 生命周期函数--监听页面初次渲染完成

@@ -20,4 +20,4 @@
 <open-data type='userAvatarUrl'></open-data>
 
 <!-- 网络请求，数据绑定 -->
-<view>网络请求：{{bomVersions[0]}}</view>
+<view wx:for='{{bomVersions}}'>BOM节点：{{item.headId}}</view>

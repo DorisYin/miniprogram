@@ -7,10 +7,10 @@ App({
   onLaunch: function () {
     wx.getUserInfo({
       success: function (res) {
-        console.log(res)
+        // console.log(res)
       },
       fail: function (res) {
-        console.log(res)
+        // console.log(res)
       }
     })
   },
@@ -25,7 +25,7 @@ App({
   onShow: function (options) {
     //判断小程序进入场景
     //场景值列表：https://developers.weixin.qq.com/miniprogram/dev/reference/scene-list.html
-    console.log(options)
+    // console.log(options)
     switch (options.scene) {
       case 1001:
         //1001场景业务逻辑

@@ -1,0 +1,18 @@
+<!--pages/text/text.wxml-->
+<!-- 1.基本使用 -->
+<text>hello world\n</text>
+<text>hhll\n</text>
+<!-- 2.文本长按选中,需要真机调试 -->
+<text selectable="{{true}}">hahahah\n</text>
+<text selectable>hehehehhe</text>
+<!-- 3.space:决定文本空格的大小 -->
+<text>haha eheh\n</text>
+<text space="nbsp">haha eheh\n</text>
+<text space="ensp">haha eheh\n</text>
+<text space="emsp">haha eheh\n</text>
+<!-- 4.decode属性：是否解码文本 -->
+<text>5 &gt; 3\n</text>
+<text decode="{{true}}">5 &gt; 3\n</text>
+<text decode="true">5 &gt; 3\n</text>
+<text decode>5 &gt; 3\n</text>
+

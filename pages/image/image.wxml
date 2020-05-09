@@ -1,0 +1,20 @@
+<!--pages/image/image.wxml-->
+<!-- 1.image组件可以写成单标签，也可以修成双标签
+2.image组件默认有自己的大小：320*240
+3.image组件是一个行内块级元素(inline-block) -->
+<image />
+<!-- src:本地路径(相对路径/绝对路径)/远程路径 -->
+<image src="../../images/rizhi.jpg"></image>
+<image src="/images/rizhi.jpg"></image>
+<image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1589012448554&di=6c07ed07aa19fc092155ad7f3bdda36e&imgtype=0&src=http%3A%2F%2Fa2.att.hudong.com%2F36%2F48%2F19300001357258133412489354717.jpg"></image>
+
+<!-- src补充：调用系统api，在相册中的图片，并回显在页面上 -->
+<button bindtap="handleChooseAlbum">选择图片</button>
+<image src="{{chooseImagePath}}"></image>
+
+<!-- bindload:图片载入完毕时触发
+lazyload：图片懒加载（上下三屏） -->
+<image wx:for='{{10}}' src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1589012448554&di=6c07ed07aa19fc092155ad7f3bdda36e&imgtype=0&src=http%3A%2F%2Fa2.att.hudong.com%2F36%2F48%2F19300001357258133412489354717.jpg" bindload="handleImageLoad" lazy-load></image>
+
+<!-- show-menu-by-longpress:长按，弹出菜单，识别小程序码 -->
+<image show-menu-by-longpress src="/images/rizhihl.jpg" ></image>

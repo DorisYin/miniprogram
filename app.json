@@ -1,5 +1,8 @@
 {
   "pages": [
+    "pages/image/image",
+    "pages/button/button",
+    "pages/text/text",
     "pages/index/index",
     "pages/logs/logs",
     "pages/about/about"
@@ -10,7 +13,8 @@
     "navigationBarTitleText": "我的小程序",
     "navigationBarTextStyle": "white",
     "backgroundColor": "#ff0000",
-    "enablePullDownRefresh": false
+    "enablePullDownRefresh": false,
+    "onReachBottomDistance":50
   },
   "tabBar": {
     "list": [

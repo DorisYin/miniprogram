@@ -1,0 +1,5 @@
+<!--pages/button/button.wxml-->
+<!-- 1.button的基本使用 -->
+<button size="mini" type="warn" plain disabled="true" loading="true">anniu</button>
+<!-- hover-class,设置点击样式 -->
+<button hover-class="pressed">anniu</button>
