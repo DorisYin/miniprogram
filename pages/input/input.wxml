@@ -1,0 +1,6 @@
+<!--pages/input/input.wxml-->
+<input></input>
+<!-- value:input中的默认值 -->
+<input value="sss"></input>
+<!-- type:决定键盘类型 -->
+<input type="number"></input>
