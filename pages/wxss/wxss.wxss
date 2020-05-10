@@ -1,0 +1,18 @@
+/* pages/wxss/wxss.wxss */
+/* 导入样式 */
+@import './style/box.wxss';
+
+.box {
+  color: blue;
+  font-size: 50px;
+}
+/* .box1{
+  height: 100px;
+  width: 100px;
+  background: blueviolet;
+}
+.box2{
+  height: 200rpx;
+  width: 200rpx;
+  background: brown;
+} */

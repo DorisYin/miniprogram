@@ -1,4 +1,4 @@
-// pages/scroll/scroll.js
+// pages/wxss/wxss.js
 Page({
 
   /**
@@ -6,10 +6,6 @@ Page({
    */
   data: {
 
-  },
-
-  handleScroll(event) {
-    console.log("正在滚动", event)
   },
 
   /**

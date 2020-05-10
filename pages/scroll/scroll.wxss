@@ -16,6 +16,7 @@
 .container2{
   background: indianred;
   height: 200px;
+  margin-top: 10px;
 }
 .item2{
   height: 100px;
