@@ -4,3 +4,10 @@
 <input value="sss"></input>
 <!-- type:决定键盘类型 -->
 <input type="number"></input>
+<!-- password:密文 -->
+<input password></input>
+<!-- placeholder:占位文字 -->
+<input placeholder="请输入内容"></input>
+
+<!-- input绑定事件 -->
+<input bindinput="handleInput" bindfocus="handleFocus" bindblur="handleBlur"></input>
