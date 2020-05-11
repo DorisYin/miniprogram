@@ -8,7 +8,7 @@ Page({
     nowtime: new Date().toLocaleString(),
     box: 'box',
     isShow: true,
-    score:90
+    score:''
 
   },
   onLoad() {
@@ -27,7 +27,11 @@ Page({
     this.setData({
       isShow: !this.data.isShow
     })
+  },
+  handleInput(event){
+    console.log("用户输入内容",event)
+    this.setData({
+      score:event.detail.value
+    })
   }
-
-
 })

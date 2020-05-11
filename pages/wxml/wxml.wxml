@@ -13,10 +13,29 @@
 <view class="box false">heheh</view>
 <view class="box ">heheh</view>
 
-
 <!-- wx:if-->
 <view>-----------条件判断------------</view>
 <button size="mini" bindtap="handleSwitchShow">切换显示与否</button>
 <view wx:if='{{isShow}}'>wwwwww</view>
-<!-- wx:elif;wx.else -->
-<view wx:if='{{}}'></view>
+<!-- wx:elif;wx.else-->
+<!-- 输入分数，并判断等级 -->
+<input placeholder="请输入分数" bindinput="handleInput"></input>
+<view wx:if='{{score>=90}}'>优秀</view>
+<view wx:elif='{{score>=80}}'>良好</view>
+<view wx:elif='{{score>=60}}'>及格</view>
+<view wx:else>不及格</view>
+<!-- hidden属性:不设置值或值为空字符串时，隐藏；{{true}}，隐藏；{{false}}，不隐藏 -->
+<view hidden='{{false}}'>shlsfjgn</view>
+<!-- wx:if和hidden在隐藏组件时有什么区别 -->
+<!-- 
+  hidden:将一个组件隐藏起来时，该组件依然存在(display:none),在调试器wxml中可以看到该组件
+  wx:if：将一个组件隐藏起来时，该组件根本不存在（压根没有创建）
+  选择：
+    如果显示和隐藏切换的频率非常高，选择使用hidden
+    如果显示和隐藏切换的频率非常低，选择使用wx:if
+ -->
+<view hidden="{{true}}">hidden</view>
+<view wx:if="{{false}}">wxif</view>
+
+<!-- 列表渲染 -->
+<!-- 1.wx:for -->
