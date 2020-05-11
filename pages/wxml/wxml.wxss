@@ -1,0 +1,10 @@
+/* pages/wxml/wxml.wxss */
+.box {
+  font-size: 64rpx;
+  color: red;
+}
+
+.box1 {
+  font-size: 32rpx;
+  color: plum;
+}

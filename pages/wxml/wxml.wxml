@@ -1,0 +1,22 @@
+<!--pages/wxml/wxml.wxml-->
+<view>{{message}}</view>
+<view>{{firstname}} {{lastname}}</view>
+<view>{{firstname+' '+lastname}}</view>
+<view>{{age>18?'成年':'未成年'}}</view>
+<!-- 实时显示当前时间 -->
+<view>{{nowtime}}</view>
+<!-- 点击按钮切换字体颜色 -->
+<button size="mini" bindtap="handleButton">切换颜色</button>
+<view class="{{box}}">hhhhh</view>
+<!-- 设置两个样式时，显示第二个 -->
+<view class="box box1">heheh</view>
+<view class="box false">heheh</view>
+<view class="box ">heheh</view>
+
+
+<!-- wx:if-->
+<view>-----------条件判断------------</view>
+<button size="mini" bindtap="handleSwitchShow">切换显示与否</button>
+<view wx:if='{{isShow}}'>wwwwww</view>
+<!-- wx:elif;wx.else -->
+<view wx:if='{{}}'></view>
