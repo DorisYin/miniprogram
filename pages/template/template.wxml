@@ -1,0 +1,19 @@
+<!--pages/template/template.wxml-->
+<!-- template:代码的复用 -->
+<!-- 模板中包裹的内容，在没有被使用前，是不会进行任何的渲染的 -->
+<template name="contentItem">
+<button size="mini">{{btnContent}}</button>
+<view>{{viewContent}}</view>
+</template>
+
+<template is="contentItem" data="{{'btnContent':'登录','viewContent':'哈哈哈'}}"/>
+<!-- <template is="contentTemplate" data="{{'btnContent':'取消','viewContent':'呵呵呵'}}"></template> -->
+
+<!-- import & include:
+import导入：
+1.主要是导入template
+2.特点：不能进行递归导入
+include引入：
+1.将公共的wxml中的组件抽取到一个文件中
+2.特点：不能导入template/wxs，可以进行递归导入 -->
+
