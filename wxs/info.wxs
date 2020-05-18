@@ -1,0 +1,10 @@
+// js代码
+var message = 'hello world';
+function sum(num1, num2) {
+  return num1 + num2;
+}
+//模块化导出
+module.exports = {
+  message: message,
+  sum: sum
+}
