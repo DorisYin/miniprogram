@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/usecpn/usecpn",
     "pages/event/event",
     "pages/wxs/wxs",
     "pages/template/template",
@@ -14,6 +15,9 @@
     "pages/logs/logs",
     "pages/about/about"
   ],
+  "usingComponents": {
+    
+  },
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#dcdcdc",
@@ -21,7 +25,7 @@
     "navigationBarTextStyle": "white",
     "backgroundColor": "#ff0000",
     "enablePullDownRefresh": false,
-    "onReachBottomDistance":50
+    "onReachBottomDistance": 50
   },
   "tabBar": {
     "list": [
@@ -42,5 +46,4 @@
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"
-
 }

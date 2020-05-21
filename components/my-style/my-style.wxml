@@ -1,0 +1,13 @@
+<!--components/my-style/my-style.wxml-->
+<!-- 组件内的class样式和组件外的class样式，默认是有一个隔离效果的
+为了防止样式的错乱，官方不推荐使用id，属性，标签选择器 -->
+<view class="title">我是sytle的标题</view>
+<view class="content">我是style的内容</view>
+<!-- 希望页面内的样式影响自定义组件中的样式，可以在组件的js文件中设置
+options:{
+  styleIsolation:"apply-shared"
+} -->
+<!-- 希望组件内的样式也影响页面内的
+options:{
+  styleIsolation:"shared"
+} -->
