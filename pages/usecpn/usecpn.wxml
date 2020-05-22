@@ -2,7 +2,8 @@
 <!-- 1.自定义组件的基本使用 -->
 <my-cpn></my-cpn>
 <my-cpn/>
-<!-- 2.自定义组件的样式细节 -->
+
+<!-- 2.自定义组件的样式细节:页面样式与组件样式相互影响 -->
 <my-style/>
 <!-- 组件内的class样式和组件外的class样式，默认是有一个隔离效果的
 为了防止样式的错乱，官方不推荐使用id，属性，标签选择器 -->
@@ -14,3 +15,19 @@ options:{
 options:{
   styleIsolation:"shared"
 } -->
+
+<!-- 3.给自定义组件传递数据 和 样式-->
+<my-prop title='哈哈' content='hahahah' titleclass='red'/>
+<my-prop title='呵呵' content='hehehehehe' titleclass='green'/>
+<my-prop titleclass='blue'/>
+
+<!-- 4.组件内部发出事件 -->
+<view>当前计数：{{count}}</view>
+<my-event bind:increment='handleIncrement'/>
+
+<!-- 5.tab-control练习 -->
+<my-tab-control titles='{{["衣服","裤子","鞋子","帽子"]}}' bind:itemClick='handleItemClick'/>
+
+<!-- 6.直接选中组件修改数据/调用方法 -->
+<button size='mini' bind:tap='handleIncrementCpn'>修改组件内数据</button>
+<my-select class='select-class' id='select-id'/>
